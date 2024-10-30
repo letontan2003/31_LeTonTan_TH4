@@ -10,10 +10,10 @@ export default function App() {
    const screenWith = Dimensions.get('window').width;
 
    useEffect(() => {
-    axios.get('https://671d96d709103098807d58ba.mockapi.io/34_LeTonTan/category').then((response) => {
+    axios.get('https://6721d08a98bbb4d93ca9c2ac.mockapi.io/api/v1/catelory').then((response) => {
       setCategory(response.data);
     });
-    axios.get('https://671d96d709103098807d58ba.mockapi.io/34_LeTonTan/location').then((response) => {
+    axios.get('https://6721d08a98bbb4d93ca9c2ac.mockapi.io/api/v1/location').then((response) => {
       setLocation(response.data);
     });
    }, []);
@@ -197,7 +197,8 @@ const styles = StyleSheet.create({
     marginTop: 10,
     flex: 1,
     alignItems: 'center',
-    flexDirection:'row'
+    flexDirection:'row',
+    justifyContent: 'space-between',
   },
   sectionTitle:{
     padding: 10,
@@ -206,7 +207,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   icon3gach:{
-    marginLeft: 215,
+    marginRight: 10,
     height: 30,
     width: 30,
   },
